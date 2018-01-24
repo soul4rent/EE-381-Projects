@@ -3,7 +3,7 @@
 # Exploration of pseudorandom number generators
 #
 # Below the parameters in the formula are assigned their values.
-
+import math
 
 while True:
     
@@ -18,6 +18,11 @@ while True:
 
     for x in range(1, numberGenerated+1):
         seed = (mult * seed + adder)%norm
-        print(seed)
+
+        r = seed/norm
+        print('%.3f'%r)
+
+        number = math.floor(r*6+1)
+        print(number)
 
     print("-------------------------")
