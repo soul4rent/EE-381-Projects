@@ -4,13 +4,20 @@
 #
 # Below the parameters in the formula are assigned their values.
 
-mult = 3
-adder = 15
-norm = 11
-seed = 1
 
-#Below is the formula
+while True:
+    
+    mult = 41
+    adder = 31
+    norm = 100
+    seed = int(input("Seed:"))
 
-for x in range(1, 10):
-    seed = (mult * seed + adder)%norm
-    print(seed)
+    numberGenerated = int(input("Amt of Numbers:"))
+
+    #Below is the formula
+
+    for x in range(1, numberGenerated+1):
+        seed = (mult * seed + adder)%norm
+        print(seed)
+
+    print("-------------------------")
