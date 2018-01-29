@@ -1,5 +1,5 @@
 #tutorial on determining summary statistics
-
+import statistics
 
 numbers = []
 #user inputs data
@@ -16,5 +16,7 @@ s = sum(numbers)
 N = len(numbers)
 #caclulate the mean
 mean = s/N
-
 print("Mean:", mean)
+#calculate the median
+numbers.sort()
+print("median: ", statistics.median(numbers))
