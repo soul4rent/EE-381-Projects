@@ -19,4 +19,18 @@ mean = s/N
 print("Mean:", mean)
 #calculate the median
 numbers.sort()
-print("median: ", statistics.median(numbers))
+
+if N%2 == 0:
+    mone = N/2
+    mtwo = (N/2)+1
+
+    mone = int(mone)-1
+    mtwo = int(mtwo)-1
+
+    median = (numbers[mone] + numbers[mtwo])/2
+
+else:
+    median = (N+1)/2
+
+print("Median (manual): ", median)
+print("median: ", statistics.median(numbers)) #debug
