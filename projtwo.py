@@ -30,7 +30,18 @@ if N%2 == 0: #even number of datums
     median = (numbers[mone] + numbers[mtwo])/2
 
 else:
-    median = (N+1)/2
+    m = (N+1)/2
+    m = int(m)-1
+    median = numbers[m]
 
 print("Median (manual): ", median)
 print("median: ", statistics.median(numbers)) #debug
+
+
+#calculate mode
+
+from collections import Counter
+
+c = Counter(numbers)
+mode = c.most_common(1)
+print(mode)
