@@ -20,7 +20,7 @@ print("Mean:", mean)
 #calculate the median
 numbers.sort()
 
-if N%2 == 0:
+if N%2 == 0: #even number of datums
     mone = N/2
     mtwo = (N/2)+1
 
