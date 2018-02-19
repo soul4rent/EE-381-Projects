@@ -1,4 +1,7 @@
 #tutorial on determining summary statistics
+
+
+
 import statistics
 
 numbers = []
@@ -39,9 +42,18 @@ print("median: ", statistics.median(numbers)) #debug
 
 
 #calculate mode
-
 from collections import Counter
 
 c = Counter(numbers)
 mode = c.most_common(1)
 print(mode)
+
+
+#standard deviation
+import math
+
+for x in numbers
+    y = (x - mean)**2
+    a = a+y
+sigma = math.sqrt(a/N)
+print(sigma)
