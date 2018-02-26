@@ -1,11 +1,17 @@
 #simulate binomial random variable, uses sum to simulate b.r.t
 import random
 
+
+print("prob success:")
+p = float(input())
+print("num trials:")
+N = int(input())
+
 n = 5 #number of trials
 x = 3 #the number of successes
-p = 0.7 #probability of success for any outcome
+#p = 0.7 #probability of success for any outcome
 
-N = 10000 #the number of times the process is repeated
+#N = 10000 #the number of times the process is repeated
 
 trial = [0]
 trial = trial*n #empty trial list
@@ -17,8 +23,10 @@ for k in range (N): #number of times process is repeated
         r = random.uniform(0,1)
         if r < p:
             trial[i] = 1 #success
+            print("Success")
         else:
-            trial[i] = 0 #probably redundant, but prof. code, not mine.
+            trial[i] = 0 #failure
+            print("Fail")
 
     s = sum(trial)
 
